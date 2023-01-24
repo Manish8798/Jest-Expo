@@ -55,7 +55,7 @@ const Home = (props) => {
           data={names}
           renderItem={({ item }) => {
             return (
-              <View>
+              <View style={{ padding: 10, margin: 5 }}>
                 <Text>{item.name}</Text>
               </View>
             );
