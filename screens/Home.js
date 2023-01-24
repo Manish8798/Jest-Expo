@@ -53,11 +53,11 @@ const Home = (props) => {
       {names.length > 0 && (
         <FlatList
           data={names}
-          renderItem={({ item }) => {
+          renderItem={({ item, index }) => {
             return (
-              <View style={{ padding: 10, margin: 5 }}>
-                <Text>{item.name}</Text>
-              </View>
+              <TouchableOpacity style={{ padding: 10, margin: 5 }}>
+                <Text>{`${index + 1}). ${item.name}`}</Text>
+              </TouchableOpacity>
             );
           }}
         />
@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    // alignItems: "center",
+    // justifyContent: "center",
   },
 });
 
